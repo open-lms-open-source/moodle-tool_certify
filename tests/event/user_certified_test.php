@@ -70,7 +70,7 @@ final class user_certified_test extends \advanced_testcase {
         ]);
         $events = $sink->get_events();
         $sink->close();
-        $this->assertCount(1, $events);
+        $this->assertCount(3, $events); // The other 2 are calendar event deletions.
         $event = reset($events);
         $this->assertInstanceOf(\enrol_programs\event\program_completed::class, $event);
 

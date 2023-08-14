@@ -34,6 +34,6 @@ $plugin->release   = 'v2.0dev';
 $plugin->supported = [401, 401];
 
 $plugin->dependencies = [
-    'local_openlms' => 2023080600,
-    'enrol_programs' => 2023080600,
+    'local_openlms' => 2023081200,
+    'enrol_programs' => 2023081200,
 ];
