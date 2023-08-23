@@ -93,6 +93,10 @@ final class valid_test extends \advanced_testcase {
     public function test_notify_users() {
         global $DB;
 
+        if (!get_config('tool_certificate', 'version')) {
+            $this->markTestSkipped('tool_certificate is required');
+        }
+
         /** @var \tool_certify_generator $generator */
         $generator = $this->getDataGenerator()->get_plugin_generator('tool_certify');
         /** @var \enrol_programs_generator $programgenerator */
